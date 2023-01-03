@@ -1,0 +1,53 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+.clients {
+display: flex;
+
+  h2 {
+    @extend .titles-h2;
+    padding-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0 15px 70px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+.clients__list {
+  // display: grid;
+  // grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+
+  &--client {
+    border: 1px solid v.$lighter-gray;
+    border-radius: 4px;
+    height: 92px;
+    min-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &:hover {
+      @extend .hover;
+    }
+  }
+
+  &--icon {
+    fill: v.$lighter-gray;
+    &:hover,
+    &:focus {
+      @extend .hover;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

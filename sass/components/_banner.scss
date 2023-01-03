@@ -1,0 +1,123 @@
+@use "../utils/variables" as v;
+
+.banner {
+  background-color: v.$dark-gray;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/fondo-index.jpg");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  // width: 100%;
+  // height: 400px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: v.$white-color;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    width: 360px;
+  }
+  &__button {
+    background-color: v.$brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    color: v.$white-color;
+    font-size: 1rem;
+    font-weight: v.$ft-bold;
+    letter-spacing: 0.06em;
+    margin-top: 30px;
+    padding: 10px 32px;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.7s;
+
+    &:hover,
+    &:focus {
+      background-color: v.$light-gray;
+      color: v.$brand-color;
+      transition: 0.7s;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .banner {
+    background-color: v.$dark-gray;
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url("../images/fondo-index@2x.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// &__container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   // padding: 113px 0;
+// }
+
+// &__title {
+//   color: v.$white-color;
+//   font-size: 44px;
+//   text-align: center;
+//   text-transform: uppercase;
+//   letter-spacing: 0.06em;
+//   line-height: 1.3;
+//   width: 696px;
+// }
+// &__button {
+//   background-color: v.$brand-color;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   border-radius: 4px;
+//   border-color: transparent;
+//   color: v.$white-color;
+//   font-size: 1rem;
+//   font-weight: v.$ft-bold;
+//   letter-spacing: 0.06em;
+//   margin-top: 30px;
+//   padding: 10px 32px;
+//   cursor: pointer;
+//   transition: 0.7s;
+
+//   &:hover,
+//   &:focus {
+//     background-color: v.$light-gray;
+//     color: v.$brand-color;
+//     transition: 0.7s;
+//   }
+// }
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+
+    &__container {
+      padding: 113px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    &__title {
+      font-size: 44px;
+      width: 696px;
+    }
+  }
+}

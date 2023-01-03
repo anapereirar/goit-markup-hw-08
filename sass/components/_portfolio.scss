@@ -1,0 +1,86 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+@use "../utils/mixins" as m;
+
+.portfolio__buttons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 50px 0;
+
+}
+
+.portfolio__buttons--button {
+  background-color: v.$light-gray;
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  margin-left: 10px;
+  padding: 8px 32px;
+
+  @include m.text(v.$black-icon, 1rem, v.$ft-semibold, 0.03em, null );
+
+
+  &:hover,
+  &.actual,
+  &:focus {
+    @extend .hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: v.$brand-color;
+    border-color: transparent;
+    color: v.$white-color;
+  }
+}
+
+.portfolio__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.portfolio--card {
+  background: v.$white-color;
+  border: 1px solid #eee;
+  width: 370px;
+  height: 404px;
+  margin: auto;
+  position: relative;
+
+  &:hover .portfolio--emergent-card {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0%);
+    transition: 250ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  h4 {
+  @include m.text(v.$black-icon, 1.1rem, v.$ft-bold, 0.06em, null);
+    padding: 20px;
+    text-align: left;
+  }
+  p {
+    text-align: left;
+    padding-left: 20px;
+    @include m.text(v.$gray-text-color, 1rem, null,0.03em, null);
+  }
+}
+.portfolio--emergent-card {
+  position: absolute;
+  top: 0;
+  height: 294px;
+  width: 370px;
+  background-color: rgba(33, 150, 243, 0.9);
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  transform: translateY(105%);
+  transition: 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  p{
+    @include m.text(v.$white-color,1rem, null, 0.03em ,28px);
+  }
+}
+
+.portfolio--image {
+  position: relative;
+  overflow: hidden;
+}

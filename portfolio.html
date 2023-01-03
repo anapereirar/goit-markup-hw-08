@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/main.min.css" />
+    <title>Principal</title>
+    <!-- Fuentes tipográficas -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Modern Normalize -->
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="css/icomoon/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__logo">
+                    <span><a href="/goit-markup-hw-08/index.html">Web Studio</a></span>
+                </div>
+
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="" width="40" height="40">
+                        <use href="images/icons.svg#bar-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="menu__header">
+                    <nav class="header__nav">
+                        <ul class="header__menu">
+                            <li class="header__menu--item"><a class="header__menu--link current"
+                                    href="/goit-markup-hw-08/index.html">Estudio</a></li>
+                            <li class="header__menu--item"><a class="header__menu--link"
+                                    href="/goit-markup-hw-08/portfolio.html">Portafolio</a>
+                            </li>
+                            <li class="header__menu--item"><a class="header__menu--link" href="#">Contactos</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="header__contact-info">
+                        <li><a class="header__contact-info--link" href="mailito:info@devstudio.com">
+                                <svg class="header__contact-info--icon" width="16" height="12">
+                                    <use href="images/icons.svg#envelope"></use>
+                                </svg>
+                                info@devstudio.com</a></li>
+                        <li><a class="header__contact-info--link" href="tel:+525552296000">
+                                <svg class="header__contact-info--icon" width="10" height="16">
+                                    <use href="images/icons.svg#mobile"></use>
+                                </svg>
+                                +52 55 5229 6000</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg class="" width="40" height="40">
+                            <use href="images/icons.svg#bar-menux"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-menu">
+                        <nav class="mobile-menu__nav">
+                            <ul class="mobile-menu__nav--menu">
+                                <li class="mobile-menu__nav--menu-item"><a
+                                        href="/goit-markup-hw-08/index.html">Estudio</a></li>
+                                <li class="mobile-menu__nav--menu-item"><a href="portfolio.html">Portafolio</a>
+                                </li>
+                                <li class="mobile-menu__nav--menu-item"><a href="#">Contactos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="mobile-menu__contact-info">
+                            <li><a class="mobile-menu__contact-info--link-tel link" href="tel:+525552296000">
+                                    +52 55 5229 6000</a></li>
+                            <li><a class="mobile-menu__contact-info--link link" href="mailito:info@devstudio.com">
+                                    info@devstudio.com</a></li>
+                        </ul>
+                        <ul class="menu-mobile__social">
+                            <li><a href="#">Instagram</a></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="portfolio">
+            <div class=" container section">
+                <ul class="portfolio__buttons">
+                    <li><button type="button" class="portfolio__buttons--button actual">Todo</button></li>
+                    <li><button type="button" class="portfolio__buttons--button">Sitios-web</button></li>
+                    <li><button type="button" class="portfolio__buttons--button">Aplicaciones</button></li>
+                    <li><button type="button" class="portfolio__buttons--button">Diseño</button></li>
+                    <li><button type="button" class="portfolio__buttons--button">Marketing</button></li>
+                </ul>
+                <section class="portfolio__cards">
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+                            <img src="images/portfolio/1-tecnoduck.jpg"
+                                srcset="images/portfolio/1-tecnoduck.jpg 1x, images/portfolio/1-tecnoduck@2x.jpg 2x"
+                                alt="Portatil mostrando un sitio web" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Tecnoduck es una plataforma de distribución de coronavirus de última generación. Las
+                                    compañías usan esta plataforma para el espionaje digital y los ataques a los
+                                    servidores seguros de la competencia.</p>
+                            </div>
+                        </div>
+                        <h4>Tecnoduck</h4>
+                        <p>Sitios-web</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+                            <img src="images/portfolio/2-nueva-orleans-vs-estrella-dorada.jpg"
+                                srcset="images/portfolio/2-nueva-orleans-vs-estrella-dorada.jpg 1x, images/portfolio/2-nueva-orleans-vs-estrella-dorada@2x.jpg 2x"
+                                alt="Dos jugadores de baloncesto compitiendo por la pelota" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Póster Nueva Nueva Orleans vs Estrella Dorada</h4>
+                        <p>Diseño</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+
+                            <img src="images/portfolio/3-seafood.jpg"
+                                srcset="images/portfolio/3-seafood.jpg 1x, images/portfolio/3-seafood@2x.jpg 2x"
+                                alt="Imagotipo de restaurante Seafood" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tenetur dolor eius
+                                    nemo, quaerat vitae repudiandae expedita aut esse ex id odit voluptate, velit atque,
+                                    suscipit eum delectus provident vero?</p>
+                            </div>
+                        </div>
+                        <h4>Restaurante Seafood</h4>
+                        <p>Aplicaciones</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+
+                            <img src="images/portfolio/4-proyecto-prime.jpg"
+                                srcset="images/portfolio/4-proyecto-prime.jpg 1x, images/portfolio/4-proyecto-prime@2x.jpg 2x"
+                                alt="Audífonos de diadema" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Proyecto Prime</h4>
+                        <p>Marketing</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+
+                            <img src="images/portfolio/5-proyecto-cajas.jpg"
+                                srcset="images/portfolio/5-proyecto-cajas.jpg 1x, images/portfolio/5-proyecto-cajas@2x.jpg 2x"
+                                alt="Diseño de cajas" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Proyecto Cajas</h4>
+                        <p>Aplicaciones</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+
+                            <img src="images/portfolio/6-inspiracion-sin-limites.jpg"
+                                srcset="images/portfolio/6-inspiracion-sin-limites.jpg 1x, images/portfolio/6-inspiracion-sin-limites@2x.jpg 2x"
+                                alt="Computador con diseño de una interfaz web" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>La inspiración no tiene límites</h4>
+                        <p>Sitio web</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+                            <img src="images/portfolio/7-edicion-limitada.jpg"
+                                srcset="images/portfolio/7-edicion-limitada.jpg 1x, images/portfolio/7-edicion-limitada@2x.jpg 2x"
+                                alt="Diseño de Revista" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Edición Limitada</h4>
+                        <p>Diseño</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+                            <img src="images/portfolio/8-proyecto-lab.jpg"
+                                srcset="images/portfolio/8-proyecto-lab.jpg 1x, images/portfolio/8-proyecto-lab@2x.jpg 2x"
+                                alt="Diseño de etiqueta" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Proyecto Lab</h4>
+                        <p>Marketing</p>
+                    </div>
+                    <div class="portfolio--card">
+                        <div class="portfolio--image">
+                            <img src="images/portfolio/9-negocio-crecimiento.jpg"
+                                srcset="images/portfolio/9-negocio-crecimiento.jpg 1x, images/portfolio/9-negocio-crecimiento@2x.jpg 2x"
+                                alt="Manos trabajando en un computador" width="370">
+                            <br>
+                            <div class="portfolio--emergent-card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, nulla in vero
+                                    dolorem quod earum blanditiis nesciunt at tenetur delectus voluptatem aperiam
+                                    perspiciatis quisquam, similique, fugiat quasi ipsam sit vel.</p>
+                            </div>
+                        </div>
+                        <h4>Negocio en Crecimiento</h4>
+                        <p>Aplicaciones</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__address">
+                <div class="footer__logo">
+                    <span><a href="#">Web Studio</a></span>
+                </div>
+                <address class="footer__address--item">
+                    Calz. Ticomán 500, Ciudad de <br>México, CDMX, México
+                </address>
+                <address class="footer__address--contact-info">
+                    <a href="mailito:info@devstudio.com">info@devstudio.com</a>
+                    <br>
+                    <a href="tel:+525552296000">+52 55 5229 6000</a>
+                </address>
+            </div>
+            <div class="footer__social">
+                <h4>Encuéntrenos en</h4>
+                <ul class="footer__social--icon">
+                    <li><a href="#" target="_blank"><span class="ico icon-instagram"></span></a></li>
+                    <li><a href="#" target="_blank"><span class="ico icon-twitter"></span></a></li>
+                    <li><a href="#" target="_blank"><span class="ico icon-facebook"></span></a></li>
+                    <li><a href="#" target="_blank"><span class="ico icon-linkedin"></span></a></li>
+                </ul>
+            </div>
+            <div class="footer__email">
+                <form>
+                    <h4>Suscríbase al boletín informativo</h4>
+                    <div class="footer__email--news-display">
+                        <label for="email-news">
+                            <input type="text" id="email-news" placeholder="Correo electrónico">
+                        </label>
+                        <button class="footer__email--btn-news" type="submit">Enviar
+                            <svg width="24" height="24">
+                                <use href="images/icons.svg#send-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
+</body>
+
+</html>

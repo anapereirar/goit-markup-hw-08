@@ -1,0 +1,234 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+@use "../utils/mixins" as m;
+
+// Estilos Menu
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .menu__header {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  svg:hover,
+  svg:focus {
+    @extend .hover;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-menu__nav--menu {
+  list-style: none;
+  a {
+    text-decoration: none;
+    @include m.text(v.$black-icon, 2.5rem, v.$ft-semibold, 0.02em, 2);
+  }
+  a:hover {
+    @extend .hover;
+  }
+}
+
+.mobile-menu__contact-info {
+  list-style: none;
+  padding-top: 300px;
+
+  &--link-tel {
+    text-decoration: none;
+    @include m.text(v.$brand-color, 2.125rem, v.$ft-semibold, 0.02em, null);
+  }
+  &--link {
+    text-decoration: none;
+    @include m.text(v.$gray-text-color, 1.5rem, v.$ft-semibold, 0.02em, 3);
+  }
+  .link {
+    &:hover,
+    &:focus {
+      @extend .hover;
+    }
+  }
+}
+
+.menu-mobile__social {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  @include m.text(v.$gray-text-color, 1.12rem, v.$ft-semibold, 0.02em, null);
+  @extend .images-row;
+
+  a {
+    color: v.$brand-color;
+    text-decoration: none;
+  }
+
+  .menu-mobile--rectangle {
+    display: block;
+    height: 20px;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: v.$white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  overflow-y: auto;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: v.$black-icon;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// Mis estilos
+.container {
+}
+.header {
+  border: 1px solid #ececec;
+  padding: 24px 0;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  span a {
+    @extend .logo;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu__header {
+    display: flex;
+    align-items: center;
+  }
+  .header__menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    &--link {
+      color: v.$black-icon;
+      margin-right: 60px;
+      text-decoration: none;
+      font-weight: v.$ft-semibold;
+      letter-spacing: 0.02rem;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        color: v.$brand-color;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        display: block;
+        background: v.$brand-color;
+        border-radius: 2px;
+        transition: 0.4s ease;
+        top: 47px;
+        right: 0;
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  .header__contact-info {
+    list-style: none;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      color: v.$gray-text-color;
+      font-weight: v.$ft-semibold;
+      text-decoration: none;
+      letter-spacing: 0.02rem;
+      line-height: 1.5;
+    }
+    &--link:hover,
+    &--icon:hover,
+    &--link:focus,
+    &--icon:focus {
+      fill: v.$brand-color;
+      color: v.$brand-color;
+    }
+    &--icon {
+      margin-right: 10px;
+      fill: v.$gray-text-color;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact-info {
+    display: flex;
+    &--link {
+      margin-left: 60px;
+    }
+  }
+}

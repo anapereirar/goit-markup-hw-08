@@ -1,0 +1,105 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+.team {
+  background-color: v.$light-gray;
+  h2 {
+    @extend .titles-h2;
+    padding-bottom: 50px;
+  }
+  &__cards {
+    @extend .images-row;
+  }
+    display: flex;
+}
+.team__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0 15px;
+
+}
+.team--card {
+  width: 430px;
+  height: 622px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin: 20px 10px;
+  background-color: v.$white-color;
+  h4 {
+    text-align: center;
+    letter-spacing: 0.03rem;
+    padding: 15px 0;
+  }
+  p {
+    text-align: center;
+    color: v.$gray-text-color;
+    letter-spacing: 0.03rem;
+  }
+  img {
+    width: 430px;
+    object-fit: contain;
+    margin: 0;
+  }
+}
+.team--social {
+  @extend .images-row;
+  font-size: 20px;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 80%;
+  li {
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.3;
+    width: 44px;
+    height: 44px;
+  }
+  a {
+    color: v.$lighter-gray;
+    display: block;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    background: v.$brand-color;
+    color: v.$white-color;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.3;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__cards {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team--card {
+    width: 334px;
+    height: 516px;
+
+    img {
+        width: 334px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    .team__cards{
+        width: auto;
+    }
+  .team--card {
+    width: 270px;
+    height: 428px;
+
+    img {
+      width: 270px;
+      object-fit: contain;
+      margin: 0;
+    }
+  }
+}

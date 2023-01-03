@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__logo">
+                    <span><a href="/goit-markup-hw-08/index.html">Web Studio</a></span>
+                </div>
+
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="" width="40" height="40">
+                        <use href="images/icons.svg#bar-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="menu__header">
+                    <nav class="header__nav">
+                        <ul class="header__menu">
+                            <li class="header__menu--item"><a class="header__menu--link current"
+                                    href="/goit-markup-hw-08/index.html">Estudio</a></li>
+                            <li class="header__menu--item"><a class="header__menu--link"
+                                    href="portfolio.html">Portafolio</a>
+                            </li>
+                            <li class="header__menu--item"><a class="header__menu--link" href="#">Contactos</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="header__contact-info">
+                        <li><a class="header__contact-info--link" href="mailito:info@devstudio.com">
+                                <svg class="header__contact-info--icon" width="16" height="12">
+                                    <use href="images/icons.svg#envelope"></use>
+                                </svg>
+                                info@devstudio.com</a></li>
+                        <li><a class="header__contact-info--link" href="tel:+525552296000">
+                                <svg class="header__contact-info--icon" width="10" height="16">
+                                    <use href="images/icons.svg#mobile"></use>
+                                </svg>
+                                +52 55 5229 6000</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg class="" width="40" height="40">
+                            <use href="images/icons.svg#bar-menux"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-menu">
+                        <nav class="mobile-menu__nav">
+                            <ul class="mobile-menu__nav--menu">
+                                <li class="mobile-menu__nav--menu-item"><a
+                                        href="/goit-markup-hw-08/index.html">Estudio</a></li>
+                                <li class="mobile-menu__nav--menu-item"><a href="portfolio.html">Portafolio</a>
+                                </li>
+                                <li class="mobile-menu__nav--menu-item"><a href="#">Contactos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="mobile-menu__contact-info">
+                            <li><a class="mobile-menu__contact-info--link-tel link" href="tel:+525552296000">
+                                    +52 55 5229 6000</a></li>
+                            <li><a class="mobile-menu__contact-info--link link" href="mailito:info@devstudio.com">
+                                    info@devstudio.com</a></li>
+                        </ul>
+                        <ul class="menu-mobile__social">
+                            <li><a href="#">Instagram</a></span></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><span class="menu-mobile--rectangle"></span></li>
+                            <li><a href="#">LinkedIn</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
+</body>
+
+</html>

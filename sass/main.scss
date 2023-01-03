@@ -1,0 +1,28 @@
+@use "./utils/variables" as v;
+@use "./components/page-header";
+@use "./components/banner";
+@use "./components/modal";
+@use "./components/description";
+@use "./components/team";
+@use "./components/page-footer";
+@use "./components/clients";
+@use "./components/portfolio";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: v.$ft-family;
+}
+.container {
+  min-width: 320px;
+    width: 1200px;
+    margin: 0 auto;
+    min-width: 320px;
+  }
+
+  .section {
+    padding: 94px 0;
+  }
